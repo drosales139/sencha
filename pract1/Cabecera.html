@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practica 1 JQuery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="jslib/HotSnakes/jquery-ui.css"
+    />
+    <script src="js/functions.js"></script>
+    <!-- Inclusión de biblioteca jQuery -->
+    <script src="jslib/jquery-3.4.1_min.js"></script>
+    <!-- Inclusión de biblioteca jQueryUI -->
+    <script type="text/javascript" src="jslib/HotSnakes/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $("#txtFecha").datepicker();
+      });
+      $(document).ready(function() {
+        $("#acordeon").accordion();
+      });
+      $(document).ready(function() {
+        $("#btnConver").click(function() {
+          Convertir();
+        });
+      });
+      $(document).ready(function() {
+        $("#btnFch").click(function() {
+          if ($("#txtFecha").val() == "")
+            alert("No ha ingresado algun dato, intente de nuevo.");
+          else dia();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="main">
+      <figure class="logoIto" style="display: inline">
+        <img src="images/logo.png" border="0" id="ITO" />
+      </figure>
+      <h2 id="Titulo" class="title">Pr&aacute;ctica 1 JQuery</h2>
+    </header>
+  </body>
+</html>
